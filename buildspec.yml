@@ -5,7 +5,7 @@ run-as: Linux-user-name
 phases:
   build:
     commands:
-      - ls
+      - pwd
       - ls ..
       - ls ../..
       - ls ../*
