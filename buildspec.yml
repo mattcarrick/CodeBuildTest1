@@ -3,7 +3,9 @@ version: 0.2
 phases:
   build:
     commands:
-      - pwd
-      - ls ..
-      - ls ../..
-      - ls ../*
+      - touch test.txt
+      - thiscommand fails
+
+artifacts:
+  files:
+    - '**/*'
