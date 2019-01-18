@@ -5,7 +5,6 @@ phases:
     commands:
       - touch test.txt
       - mkdir output
-      - failedcommand
   post_build:
     commands:
       - touch test2.txt
