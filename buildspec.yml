@@ -3,17 +3,17 @@ version: 0.2
 phases:
   build:
     commands:
-      - echo $CODEBUILD_BUILD_SUCCEEDING
       - touch test.txt
-      - mkdir artifacts
+      - mkdir output
       - failedcommand
-      - mv test.txt artifacts/
   post_build:
     commands:
-      - echo $CODEBUILD_BUILD_SUCCEEDING
-      - echo This still gets done
-      - touch output.txt
-      - if [ $CODEBUILD_BUILD_SUCCEEDING -eq 1 ]; then mv output.txt artifacts/; fi
+      - touch test2.txt
+      - |
+        if [ $CODEBUILD_BUILD_SUCCEEDING -eq 1 ]; then
+          mv test.txt output/
+          mv test2.txt output/
+        fi
 artifacts:
   files:
-    - 'artifacts/*'
+    - 'output/*'
