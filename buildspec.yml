@@ -4,9 +4,11 @@ phases:
   build:
     commands:
       - touch test.txt
+      - mkdir artifacts
       - thiscommand fails
       - touch test2.txt
+      - mv test.txt artifacts/
 
 artifacts:
   files:
-    - '**/*'
+    - 'artifacts/*'
