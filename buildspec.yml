@@ -5,9 +5,13 @@ phases:
     commands:
       - touch test.txt
       - mkdir artifacts
-      - touch test2.txt
+      - failedcommand
       - mv test.txt artifacts/
-
+  post_build:
+    commands:
+      - echo This still gets done
+      - touch artifacts/output.txt
+      
 artifacts:
   files:
     - 'artifacts/*'
