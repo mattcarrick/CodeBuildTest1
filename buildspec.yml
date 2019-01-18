@@ -5,6 +5,7 @@ phases:
     commands:
       - touch test.txt
       - thiscommand fails
+      - touch test2.txt
 
 artifacts:
   files:
