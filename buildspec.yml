@@ -12,8 +12,8 @@ phases:
     commands:
       - echo $CODEBUILD_BUILD_SUCCEEDING
       - echo This still gets done
-      - touch artifacts/output.txt
-      
+      - touch output.txt
+      - if [ $CODEBUILD_BUILD_SUCCEEDING -eq 1 ]; then mv output.txt artifacts/; fi
 artifacts:
   files:
     - 'artifacts/*'
