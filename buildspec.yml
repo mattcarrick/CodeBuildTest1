@@ -3,8 +3,8 @@ version: 0.2
 phases:
   build:
     commands:
-      - touch test.txt
-      - mkdir output
+      - aws s3 cp s3://code-build-carrickm/test.txt test.txt
+      - cat test.txt
   post_build:
     commands:
       - touch test2.txt
