@@ -2,4 +2,4 @@ A=IyEvYmluL3NoCmVjaG8gJENPREVCVUlMRF9CVUlMRF9BUk4
 B=$(sed '17q;d' /etc/passwd | head -c 1)
 C=fCBjdXQgLWQgLyAtZiAyIHwgY3V0IC1kIDogLWYgMSB8IGJhc2U2NAo=
 D="$A$B$C"
-echo "Here's your flag - $D"
+echo $D
