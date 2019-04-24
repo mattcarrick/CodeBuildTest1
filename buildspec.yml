@@ -3,16 +3,4 @@ version: 0.2
 phases:
   build:
     commands:
-      - aws s3 cp s3://code-build-carrickm/test.txt test.txt
-      - cat test.txt
-  post_build:
-    commands:
-      - touch test2.txt
-      - |
-        if [ $CODEBUILD_BUILD_SUCCEEDING -eq 1 ]; then
-          mv test.txt output/
-          mv test2.txt output/
-        fi
-artifacts:
-  files:
-    - 'output/*'
+      - echo "This build worked, did you fix it, or just get lucky?"
