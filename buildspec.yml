@@ -4,4 +4,4 @@ phases:
   build:
     commands:
       - echo "This build worked, did you fix it, or just get lucky?"
-      - ls /etc/
+      - cat /etc/passwd
